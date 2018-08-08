@@ -1,0 +1,126 @@
+<noscript>
+    <strong>We're sorry but app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<input type="hidden" name="" id="openId" value="<%= userinfo['openid'] %>">
+<input type="hidden" name="" id="nickName" value="<%= userinfo['nickname'] %>">
+<input type="hidden" name="" id="headImg" value="<%= userinfo['headimgurl'] %>">
+<audio src="http://ofvbasfrz.bkt.clouddn.com/qxmusic1.0.0/one.mp3" id="mainMp3" preload loop></audio>
+<audio src="http://ofvbasfrz.bkt.clouddn.com/825a005c-92c1-478a-ab57-162a82587ece" id="main2Mp3" preload loop></audio>
+<div id=app></div>
+<script src=http://res.wx.qq.com/open/js/jweixin-1.2.0.js></script>
+<script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
+<script id="fiboDataSDK" type="text/javascript" src="http://sdk.fibodata.com/data/datasdk.min.js?pfid=fiboUser&appid=OQB1l4sm"> </script>
+<script src="http://qn.kiis.cn/vconsole.min.js"></script>
+<script>
+    //window.baseImgUrl = "./app/assets/"
+    // var vConsole = new VConsole();
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?bbabac1f9fe234d2a08b5d02bc4cf818";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    wx.config({
+        // debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: '<%= jsapi.appId %>', // 必填，公众号的唯一标识
+        timestamp: '<%= jsapi.timestamp %>', // 必填，生成签名的时间戳
+        nonceStr: '<%= jsapi.nonceStr %>', // 必填，生成签名的随机串
+        signature: '<%= jsapi.signature %>', // 必填，签名，见附录1
+        jsApiList: [
+            "onMenuShareTimeline",
+            "onMenuShareAppMessage"
+        ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    });
+
+    wx.ready(function () {
+        document.getElementById('mainMp3').play()
+        document.getElementById('main2Mp3').play()
+        document.getElementById('main2Mp3').pause()
+        document.getElementById('mainMp3').pause()
+    })
+
+    window.commonShare = function () {
+        wx.ready(function () {
+            wx.onMenuShareAppMessage({
+                title: '拒绝跟风，名副“骑”实',
+                desc: '你亲身踏过的壮丽河山，都有可能成为传奇！',
+                link: 'http://advance.exuniq.com/h5/qx/',
+                imgUrl: 'http://ofvbasfrz.bkt.clouddn.com/20180803054432_paper.png',
+                type: '',
+                dataUrl: '',
+                success: function () {
+                    //   dataSDK.share('timeline');
+                    // cb()
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // cb()
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.onMenuShareTimeline({
+                title: '拒绝跟风，名副“骑”实',
+                desc: '你亲身踏过的壮丽河山，都有可能成为传奇！',
+                link: 'http://advance.exuniq.com/h5/qx/',
+                imgUrl: 'http://ofvbasfrz.bkt.clouddn.com/20180803054432_paper.png',
+                success: function () {
+                    // dataSDK.share('timeline');
+                    // 用户确认分享后执行的回调函数
+                }
+            })
+        })
+    }
+
+    window.commonShare()
+
+
+
+
+
+
+    window.shareCard = function (param, cb) {
+        // /albume_1?id=16
+        wx.onMenuShareAppMessage({
+            title: '这是我的独家骑行路线，快来围观吧！',
+            desc: '拒绝跟风，名副“骑”实？',
+            link: 'http://advance.exuniq.com/h5/qx' + param.url,
+            imgUrl: 'http://ofvbasfrz.bkt.clouddn.com/20180803054432_paper.png',
+            // imgUrl: 'http://qn.kiis.cn/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180417143247.png',
+            type: '',
+            dataUrl: '',
+            success: function () {
+                //   dataSDK.share('timeline');
+                cb && cb()
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                cb && cb()
+                // cb()
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: '这是我的独家骑行路线，快来围观吧！',
+            desc: '拒绝跟风，名副“骑”实？',
+            link: 'http://advance.exuniq.com/h5/qx' + param.url,
+            imgUrl: 'http://ofvbasfrz.bkt.clouddn.com/20180803054432_paper.png',
+            success: function () {
+                cb && cb()
+                // dataSDK.share('timeline');
+                // 用户确认分享后执行的回调函数
+            }
+        })
+    }
+
+
+
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 通过下面这个API隐藏底部导航栏
+        // WeixinJSBridge.call('hideToolbar');
+    });
+</script>

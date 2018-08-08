@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1.0,user-scale=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>拒绝跟风，名副“骑”实</title>
+    <script>
+        (function (win) {
+            var designWidth = 750
+            var rem2px = 100
+            var d = win.document.createElement("div");
+            d.style.width = "1rem";
+            d.style.display = "none";
+            var head = win.document.getElementsByTagName("head")[0];
+            head.appendChild(d);
+            var defaultFontSize = parseFloat(
+                win.getComputedStyle(d, null).getPropertyValue("width")
+            );
+            d.remove();
+            document.documentElement.style.fontSize =
+                win.innerWidth / designWidth * rem2px / defaultFontSize * 100 + "%";
+            var st = document.createElement("style");
+            var portrait =
+                "@media screen and (min-width: " +
+                win.innerWidth +
+                "px) {html{font-size:" +
+                win.innerWidth / (designWidth / rem2px) / defaultFontSize * 100 +
+                "%;}}";
+            var landscape =
+                "@media screen and (min-width: " +
+                win.innerHeight +
+                "px) {html{font-size:" +
+                win.innerHeight / (designWidth / rem2px) / defaultFontSize * 100 +
+                "%;}}";
+            st.innerHTML = portrait + landscape;
+            head.appendChild(st);
+            return defaultFontSize;
+        })(window)
+    </script>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <input type="hidden" id="openId" value="10203">
+    <input type="hidden" id="nickName" value="黎世灿">
+    <input type="hidden" id="headImg" value="1">
+    <audio src="http://ofvbasfrz.bkt.clouddn.com/qxmusic1.0.0/one.mp3" id="mainMp3" preload loop></audio>
+    <audio src="http://ofvbasfrz.bkt.clouddn.com/qxmusic1.0.0/one.mp3" id="main2Mp3" preload loop></audio>
+
+    <div id="app"></div>
+    <script id="fiboDataSDK" type="text/javascript" src="http://sdk.fibodata.com/data/datasdk.min.js?pfid=fiboUser&appid=OQB1l4sm">
+    </script>
+
+    <script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="http://qn.kiis.cn/vconsole.min.js"></script>
+
+    <script>
+        // var vConsole = new VConsole();
+        window.shareCard = function (param, cb) {
+            cb && cb()
+            console.log(param)
+        }
+        window.commonShare = function (param) {
+            console.log(param)
+        }
+
+        wx.ready(function () {
+            document.getElementById('mainMp3').play()
+            document.getElementById('mainMp3').pause()
+        })
+
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            // 通过下面这个API隐藏底部导航栏
+            WeixinJSBridge.call('hideToolbar');
+        });</script>
+</body>
+
+</html>

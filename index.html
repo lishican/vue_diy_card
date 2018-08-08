@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scale=no">
+    <!--[if IE]><link rel="icon" href="http://ofvbasfrz.bkt.clouddn.com/qx1022/favicon.ico"><![endif]-->
+    <title>唯美相册</title>
+    <script>(function (win) {
+            var designWidth = 750
+            var rem2px = 100
+            var d = win.document.createElement("div");
+            d.style.width = "1rem";
+            d.style.display = "none";
+            var head = win.document.getElementsByTagName("head")[0];
+            head.appendChild(d);
+            var defaultFontSize = parseFloat(
+                win.getComputedStyle(d, null).getPropertyValue("width")
+            );
+            d.remove();
+            document.documentElement.style.fontSize =
+                win.innerWidth / designWidth * rem2px / defaultFontSize * 100 + "%";
+            var st = document.createElement("style");
+            var portrait =
+                "@media screen and (min-width: " +
+                win.innerWidth +
+                "px) {html{font-size:" +
+                win.innerWidth / (designWidth / rem2px) / defaultFontSize * 100 +
+                "%;}}";
+            var landscape =
+                "@media screen and (min-width: " +
+                win.innerHeight +
+                "px) {html{font-size:" +
+                win.innerHeight / (designWidth / rem2px) / defaultFontSize * 100 +
+                "%;}}";
+            st.innerHTML = portrait + landscape;
+            head.appendChild(st);
+            return defaultFontSize;
+        })(window)</script>
+    <link as=style href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/app.4b8485a7.css rel=preload>
+    <link as=style href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/chunk-vendors.4965acfd.css rel=preload>
+    <link as=script href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/app.4be66168.js rel=preload>
+    <link as=script href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/chunk-vendors.5b28e1c5.js rel=preload>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/0.07ae1706.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/10.6ca56d9d.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/3.e192af8f.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/4.967bf261.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/5.aff1635b.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/6.35b56baa.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/7.f59f4d01.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/8.59da61c3.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/9.065fccd2.css rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/0.419fc758.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/1.761e4cfa.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/10.af6d954f.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/3.83b31646.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/4.e4f7faca.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/5.93ce6ef4.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/6.0c48bc80.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/7.3937c3d6.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/8.36e8ecf7.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/9.d4d35bca.js rel=prefetch>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/chunk-vendors.4965acfd.css rel=stylesheet>
+    <link href=http://ofvbasfrz.bkt.clouddn.com/qx1022/css/app.4b8485a7.css rel=stylesheet>
+    <link rel=icon type=image/png sizes=32x32 href=http://ofvbasfrz.bkt.clouddn.com/qx1022/img/icons/favicon-32x32.png>
+    <link rel=icon type=image/png sizes=16x16 href=http://ofvbasfrz.bkt.clouddn.com/qx1022/img/icons/favicon-16x16.png>
+    <link rel=manifest href=http://ofvbasfrz.bkt.clouddn.com/qx1022/manifest.json>
+    <meta name=theme-color content=#4DBA87>
+    <meta name=apple-mobile-web-app-capable content=no>
+    <meta name=apple-mobile-web-app-status-bar-style content=default>
+    <meta name=apple-mobile-web-app-title content=app2>
+    <link rel=apple-touch-icon href=http://ofvbasfrz.bkt.clouddn.com/qx1022/img/icons/apple-touch-icon-152x152.png>
+    <link rel=mask-icon href=http://ofvbasfrz.bkt.clouddn.com/qx1022/img/icons/safari-pinned-tab.svg color=#4DBA87>
+    <meta name=msapplication-TileImage content=http://ofvbasfrz.bkt.clouddn.com/qx1022/img/icons/msapplication-icon-144x144.png>
+    <meta name=msapplication-TileColor content=#000000>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <input type=hidden id=openId value=10203>
+    <input type=hidden id=nickName value=黎世灿>
+    <input type=hidden id=headImg value=1>
+    <audio src=http://ofvbasfrz.bkt.clouddn.com/825a005c-92c1-478a-ab57-162a82587ece id=mainMp3 preload loop></audio>
+    <audio src=http://ofvbasfrz.bkt.clouddn.com/825a005c-92c1-478a-ab57-162a82587ece id=main2Mp3 preload loop></audio>
+    <div id=app></div>
+    <script src=https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js></script>
+    <script src=http://res.wx.qq.com/open/js/jweixin-1.2.0.js></script>
+    <script src=http://qn.kiis.cn/vconsole.min.js></script>
+    <script>// var vConsole = new VConsole();
+        window.shareCard = function (param, cb) {
+            cb && cb()
+            console.log(param)
+        }
+        window.commonShare = function (param) {
+            console.log(param)
+        }
+
+        wx.ready(function () {
+            document.getElementById('mainMp3').play()
+            document.getElementById('mainMp3').pause()
+        })
+
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            // 通过下面这个API隐藏底部导航栏
+            WeixinJSBridge.call('hideToolbar');
+        });</script>
+    <script src=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/chunk-vendors.5b28e1c5.js></script>
+    <script src=http://ofvbasfrz.bkt.clouddn.com/qx1022/js/app.4be66168.js></script>
+</body>
+
+</html>

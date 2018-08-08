@@ -1,0 +1,46 @@
+{
+  "name": "app2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "axios": "^0.18.0",
+    "blueimp-md5": "^2.10.0",
+    "clipboard": "^2.0.1",
+    "cropperjs": "^1.4.0",
+    "dayjs": "^1.7.4",
+    "echarts": "^4.1.0",
+    "kd-cli": "^1.0.0",
+    "moment": "^2.22.1",
+    "qn": "^1.3.0",
+    "register-service-worker": "^1.0.0",
+    "swiper": "^4.3.3",
+    "swiper-animate-cn": "^1.1.1",
+    "uuid": "^3.3.2",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vue-toasted": "^1.1.24",
+    "vue2-toast": "^1.3.2",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.11",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.11",
+    "@vue/cli-plugin-pwa": "^3.0.0-beta.11",
+    "@vue/cli-service": "^3.0.0-beta.11",
+    "@vue/eslint-config-prettier": "^3.0.0-beta.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
